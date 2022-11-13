@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Show secret
+        run: echo ${{ secrets.AWS_ACCESS_KEY }}
+
       - name: AWS - Configure credentials
         id: aws-credentials
         uses: aws-actions/configure-aws-credentials@v1
